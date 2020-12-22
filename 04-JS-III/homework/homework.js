@@ -54,11 +54,9 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  SumaPalabra = []
   for (i=0; i < palabras.length; i++) {
-    var SumaPalabra = SumaPalabra + ' ' + palabras[i]
+   return palabras.join(" ")
   }
-  return SumaPalabra  
 }
 
 function arrayContiene(array, elemento) {
@@ -90,12 +88,26 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  Number.isInteger(resultadosTest)
+  var suma = 0
+  for (i = 0; i < resultadosTest.length; i++) {
+    suma = suma + resultadosTest[i] 
+  }
+  return suma/resultadosTest.length
 }
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  Number.isInteger(numeros)
+  contador = 0
+  for (i = 0; i < numeros.length; i++) {
+    if (contador < numeros[i]) {
+      contador = numeros[i]
+    }
+  }
+  return contador 
 }
 
 function multiplicarArgumentos() {
@@ -103,6 +115,11 @@ function multiplicarArgumentos() {
   // Si no se pasan argumentos devuelve 0
   // Si se pasa un argumento, simplemente devuélvelo
   // Tu código:
+  var contador = 1
+  for (i = 0; i < arguments.length; i++) {
+    contador = contador * arguments[i]
+  }
+  return contador
 }
 
 // No modificar nada debajo de esta línea
