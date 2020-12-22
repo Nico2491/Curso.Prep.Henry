@@ -112,14 +112,16 @@ function numeroMasGrande(numeros) {
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0
-  // Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0
+  // Si se pasa un argumento, simplemente devuélvelo
   // Tu código:
-  var contador = 1
-  for (i = 0; i < arguments.length; i++) {
-    contador = contador * arguments[i]
+  if(arguments.length === 0) {
+    return 0}
+  var contador = 1;
+  for(var i = 0; i < arguments.length; i++) {
+    contador = contador * arguments[i];
   }
-  return contador
+  return contador;
 }
 
 // No modificar nada debajo de esta línea
