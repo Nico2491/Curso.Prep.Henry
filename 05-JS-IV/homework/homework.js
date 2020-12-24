@@ -40,7 +40,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  return objetoMisterioso['numeroMisterioso'] * 5
+  return objetoMisterioso.numeroMisterioso * 5
 }
 
 function eliminarPropiedad(objeto, propiedad) {
@@ -67,7 +67,7 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if (usuario['email']) {
+  if (usuario.email) { //Si usuario.email presenta un valor, automaticamente la respuesta es "true"
     return true
   }
   else {
@@ -81,7 +81,7 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (objeto[propiedad]) {
+  if (objeto[propiedad]) { //Si objeto[propiedad] presenta un valor, automaticamente la respuesta es "true"
     return true
   }
   else {
@@ -115,7 +115,8 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
-  
+  usuario.amigos.push(nuevoAmigo)
+  return usuario
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -124,6 +125,10 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  for(var i = 0; i < usuarios.length; i++) {
+    usuarios[i].esPremium = true;
+  }
+  return usuarios;
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -133,6 +138,11 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  var suma = 0
+  for (i =0; i < usuario.posts.length; i++) { //no hace falta usar la propiedad Number.isInteger ya que como va uno en uno y arranca en cero, son todos numeros enteros
+    suma = suma + usuario.posts[i].likes
+  } 
+  return suma
 }
 
 function agregarMetodoCalculoDescuento(producto) {
@@ -145,7 +155,10 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+  producto.calcularPrecioDescuento = function () {
+    return producto.precio - (producto.precio * producto.porcentajeDeDescuento)
+   }
+  return producto
 }
 
 // No modificar nada debajo de esta línea
