@@ -1,0 +1,21 @@
+h1 {
+    color:steelblue
+}
+
+img {
+    width: 400px;
+}
+
+#thirdDiv {
+    height: 600px;
+    width: 500px;
+    background:linear-gradient(45deg, rgb(0, 126, 6), rgb(28, 228, 2), rgb(129, 247, 82), rgb(149, 247, 157), rgb(206, 243, 206));
+    padding:50px;
+    border-color: red;
+    border-style:dotted;
+}
+
+#SpanId {
+    font-size: 18px;
+    margin: 50px;
+}
