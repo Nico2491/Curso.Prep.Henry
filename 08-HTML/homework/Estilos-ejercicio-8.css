@@ -1,9 +1,25 @@
+body {
+    background: url('/08-HTML/homework/fondo3.png')
+}
+
 h1 {
-    color:steelblue
+    color:white
+}
+
+h3 {
+    color:white
+}
+
+h4 {
+    color:white
 }
 
 img {
     width: 400px;
+}
+
+a {
+    color:red;
 }
 
 #thirdDiv {
@@ -11,11 +27,13 @@ img {
     width: 500px;
     background:linear-gradient(45deg, rgb(0, 126, 6), rgb(28, 228, 2), rgb(129, 247, 82), rgb(149, 247, 157), rgb(206, 243, 206));
     padding:50px;
+    margin-top: 1cm;
     border-color: red;
     border-style:dotted;
 }
 
 #SpanId {
     font-size: 18px;
+    color:white;
     margin: 50px;
 }
