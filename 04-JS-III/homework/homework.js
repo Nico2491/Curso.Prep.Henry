@@ -101,13 +101,13 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
   Number.isInteger(numeros)
-  contador = 0
+  var mayor = numeros [0]
   for (i = 0; i < numeros.length; i++) {
-    if (contador < numeros[i]) {
-      contador = numeros[i]
+    if (mayor < numeros[i]) {
+      mayor = numeros[i]
     }
   }
-  return contador
+  return mayor
 }
 
 function multiplicarArgumentos() {
