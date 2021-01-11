@@ -107,7 +107,7 @@ function numeroMasGrande(numeros) {
       contador = numeros[i]
     }
   }
-  return contador 
+  return contador
 }
 
 function multiplicarArgumentos() {
